@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simons Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body data-user-id="<%= user.id %>" data-hscore="<%= user.hscore %>">
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Left Sidebar -->
+    <div class="left-stats">
+      <div class="stat-card">
+        <div class="stat-title">Highest Score In This Session</div>
+        <div class="stat-value" id="sessionScore">0</div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-stats">
+      <div class="stat-card">
+        <div class="stat-title">All-Time Highest Score</div>
+        <div class="stat-value" id="allTimeScore">0</div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <h1 class="game-title">SIMONS GAME</h1>
+      <div class="header-controls">
+        <div class="user-info">
+          <span class="user-label">Player</span>
+          <span class="username"></span>
+        </div>
+        <button id="saveExitBtn"></button>
+      </div>
+    </div>
+
+    <!-- Main Game -->
+    <div id="main-game">
+      <div class="game-status">
+        <h2></h2>
+        <button id="start" class="start">START</button>
+      </div>
+      <div class="btn-container">
+        <div class="btn red" id="red"></div>
+        <div class="btn yellow" id="yellow"></div>
+        <div class="btn green" id="green"></div>
+        <div class="btn purple" id="purple"></div>
+      </div>
+      <div id="score"></div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
